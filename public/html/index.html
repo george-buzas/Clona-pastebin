@@ -10,15 +10,26 @@
 <body>
     <h1>Clona Pastebin</h1>
     <br />
-
-    <label for="text">Paste your text below:</label>
-    <textarea id="text" name="text" rows="10" cols="200"></textarea>
-    <br /> <br />
-
-    <button id="create-paste" class="create paste" type="button" onclick="redirect();">
-        Create paste
-    </button>
-
+    <form method="post" action="/savepaste">
+        <label>Paste your text below:</label>
+        <br /><br />
+        <textarea id="text" name="pastedText" rows="10" cols="200" placeholder="Enter text..." required></textarea>
+        <br /><br />
+        <!--<input type="submit" value="Create paste">-->
+        <button id="create-paste" class="create paste" type="submit" onlcik="redirect();">
+            Create paste
+        </button>
+    </form>
+    <form method="get" action="/getpastes">
+        <button id="get-all-pastes" class="get paste" type="submit">
+            Get all pastes
+        </button>
+    </form>
+    <!--<form method="get" action="/:pasteID">
+        <button id="get-specific-paste" class="get paste" type="submit">
+            Get one paste
+        </button>
+    </form>-->
     <script type="text/javascript" src="../../app.js"></script>
 </body>
 </html>

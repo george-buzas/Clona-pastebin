@@ -1,19 +1,11 @@
 const mongoose = require("mongoose")
 
-const pasteSchema = mongoose.Schema({
-    title: {
-        type: String, 
-        required: true
-    }, 
-    description: String,
-    pastedText: {
-        type: String,
-        required: true
-    },
+const pasteSchema = new mongoose.Schema({
+    pastedText: String,
     date: {
         type: Date,
         default: Date.now
     }
 });
 
-module.exports = mongoose.model('Schema', pasteSchema);
+module.exports = mongoose.model('paste', pasteSchema);
