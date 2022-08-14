@@ -8,4 +8,4 @@ const pasteSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('paste', pasteSchema);
+module.exports = mongoose.model("paste", pasteSchema);
